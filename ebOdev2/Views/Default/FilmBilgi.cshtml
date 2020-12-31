@@ -1,0 +1,43 @@
+﻿@model ebOdev2.Models.Bilgiler
+
+@{
+    ViewData["Title"] = "FilmBilgi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>FilmBilgi</h1>
+
+<div>
+    <h4>Bilgiler</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FilmAdi)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FilmAdi)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Yonetmen)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Yonetmen)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Turu)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Turu)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ImdbPuani)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ImdbPuani)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>
